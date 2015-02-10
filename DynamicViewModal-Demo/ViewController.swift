@@ -15,8 +15,9 @@ class ViewController: UIViewController {
     }
     
     override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        let view = UIView(frame: CGRectMake(0, 0, 230.0, 260.0))
+        let view = UIView(frame: CGRectMake(0, 0, 240.0, 320.0))
         view.backgroundColor = UIColor.redColor()
+        view.layer.cornerRadius = 5.0
         let window = UIApplication.sharedApplication().delegate?.window??
         DynamicViewModal.show(contentView: view, inView: window!)
     }
