@@ -1,6 +1,6 @@
 //
-//  DynamicViewModal.swift
-//  DynamicViewModal-Demo
+//  PathDynamicModal.swift
+//  PathDynamicModal-Demo
 //
 //  Created by Ryo Aoyama on 2/9/15.
 //  Copyright (c) 2015 Ryo Aoyama. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DynamicViewModal: NSObject, UIGestureRecognizerDelegate {
+class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
     
     /* internal properties */
     
@@ -46,8 +46,8 @@ class DynamicViewModal: NSObject, UIGestureRecognizerDelegate {
     
     /* internal functions */
     
-    class func show(contentView view: UIView, inView: UIView) -> DynamicViewModal {
-        let modal = DynamicViewModal()
+    class func show(contentView view: UIView, inView: UIView) -> PathDynamicModal {
+        let modal = PathDynamicModal()
         modal.show(contentView: view, inView: inView)
         
         return modal
@@ -237,5 +237,5 @@ class DynamicViewModal: NSObject, UIGestureRecognizerDelegate {
 }
 
 private class ModalRetainView: UIView {
-    private var modal: DynamicViewModal?
+    private var modal: PathDynamicModal?
 }

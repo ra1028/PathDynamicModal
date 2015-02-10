@@ -32,9 +32,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 	</array>
-	<key>UIViewEdgeAntialiasing</key>
-	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>UIViewEdgeAntialiasing</key>
+	<true/>
 </dict>
 </plist>

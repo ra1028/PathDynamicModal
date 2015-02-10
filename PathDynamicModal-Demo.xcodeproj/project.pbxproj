@@ -11,8 +11,8 @@
 		2A2405F01A87ED4A00371941 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2405EF1A87ED4A00371941 /* ViewController.swift */; };
 		2A2405F31A87ED4A00371941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2405F11A87ED4A00371941 /* Main.storyboard */; };
 		2A2405F51A87ED4A00371941 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2405F41A87ED4A00371941 /* Images.xcassets */; };
-		2A2406041A87ED4A00371941 /* DynamicViewModal_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2406031A87ED4A00371941 /* DynamicViewModal_DemoTests.swift */; };
-		2A24060F1A87EDDA00371941 /* DynamicViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A24060E1A87EDDA00371941 /* DynamicViewModal.swift */; };
+		2A2406041A87ED4A00371941 /* PathDynamicModal_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2406031A87ED4A00371941 /* PathDynamicModal_DemoTests.swift */; };
+		2A24060F1A87EDDA00371941 /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A24060E1A87EDDA00371941 /* PathDynamicModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -21,21 +21,21 @@
 			containerPortal = 2A2405E01A87ED4A00371941 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2A2405E71A87ED4A00371941;
-			remoteInfo = "DynamicViewModal-Demo";
+			remoteInfo = "PathDynamicModal-Demo";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2A2405E81A87ED4A00371941 /* DynamicViewModal-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DynamicViewModal-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2405E81A87ED4A00371941 /* PathDynamicModal-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PathDynamicModal-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2405EC1A87ED4A00371941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2405ED1A87ED4A00371941 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A2405EF1A87ED4A00371941 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A2405F21A87ED4A00371941 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A2405F41A87ED4A00371941 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		2A2405FD1A87ED4A00371941 /* DynamicViewModal-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DynamicViewModal-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A2405FD1A87ED4A00371941 /* PathDynamicModal-DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PathDynamicModal-DemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A2406021A87ED4A00371941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2A2406031A87ED4A00371941 /* DynamicViewModal_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicViewModal_DemoTests.swift; sourceTree = "<group>"; };
-		2A24060E1A87EDDA00371941 /* DynamicViewModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicViewModal.swift; sourceTree = "<group>"; };
+		2A2406031A87ED4A00371941 /* PathDynamicModal_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDynamicModal_DemoTests.swift; sourceTree = "<group>"; };
+		2A24060E1A87EDDA00371941 /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDynamicModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,9 +59,9 @@
 		2A2405DF1A87ED4A00371941 = {
 			isa = PBXGroup;
 			children = (
-				2A24060D1A87ED8D00371941 /* DynamicViewModal */,
-				2A2405EA1A87ED4A00371941 /* DynamicViewModal-Demo */,
-				2A2406001A87ED4A00371941 /* DynamicViewModal-DemoTests */,
+				2A24060D1A87ED8D00371941 /* PathDynamicModal */,
+				2A2405EA1A87ED4A00371941 /* PathDynamicModal-Demo */,
+				2A2406001A87ED4A00371941 /* PathDynamicModal-DemoTests */,
 				2A2405E91A87ED4A00371941 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -69,13 +69,13 @@
 		2A2405E91A87ED4A00371941 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2A2405E81A87ED4A00371941 /* DynamicViewModal-Demo.app */,
-				2A2405FD1A87ED4A00371941 /* DynamicViewModal-DemoTests.xctest */,
+				2A2405E81A87ED4A00371941 /* PathDynamicModal-Demo.app */,
+				2A2405FD1A87ED4A00371941 /* PathDynamicModal-DemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2A2405EA1A87ED4A00371941 /* DynamicViewModal-Demo */ = {
+		2A2405EA1A87ED4A00371941 /* PathDynamicModal-Demo */ = {
 			isa = PBXGroup;
 			children = (
 				2A2405ED1A87ED4A00371941 /* AppDelegate.swift */,
@@ -84,7 +84,7 @@
 				2A2405F41A87ED4A00371941 /* Images.xcassets */,
 				2A2405EB1A87ED4A00371941 /* Supporting Files */,
 			);
-			path = "DynamicViewModal-Demo";
+			path = "PathDynamicModal-Demo";
 			sourceTree = "<group>";
 		};
 		2A2405EB1A87ED4A00371941 /* Supporting Files */ = {
@@ -95,13 +95,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2A2406001A87ED4A00371941 /* DynamicViewModal-DemoTests */ = {
+		2A2406001A87ED4A00371941 /* PathDynamicModal-DemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				2A2406031A87ED4A00371941 /* DynamicViewModal_DemoTests.swift */,
+				2A2406031A87ED4A00371941 /* PathDynamicModal_DemoTests.swift */,
 				2A2406011A87ED4A00371941 /* Supporting Files */,
 			);
-			path = "DynamicViewModal-DemoTests";
+			path = "PathDynamicModal-DemoTests";
 			sourceTree = "<group>";
 		};
 		2A2406011A87ED4A00371941 /* Supporting Files */ = {
@@ -112,20 +112,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		2A24060D1A87ED8D00371941 /* DynamicViewModal */ = {
+		2A24060D1A87ED8D00371941 /* PathDynamicModal */ = {
 			isa = PBXGroup;
 			children = (
-				2A24060E1A87EDDA00371941 /* DynamicViewModal.swift */,
+				2A24060E1A87EDDA00371941 /* PathDynamicModal.swift */,
 			);
-			path = DynamicViewModal;
+			path = PathDynamicModal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2A2405E71A87ED4A00371941 /* DynamicViewModal-Demo */ = {
+		2A2405E71A87ED4A00371941 /* PathDynamicModal-Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A2406071A87ED4A00371941 /* Build configuration list for PBXNativeTarget "DynamicViewModal-Demo" */;
+			buildConfigurationList = 2A2406071A87ED4A00371941 /* Build configuration list for PBXNativeTarget "PathDynamicModal-Demo" */;
 			buildPhases = (
 				2A2405E41A87ED4A00371941 /* Sources */,
 				2A2405E51A87ED4A00371941 /* Frameworks */,
@@ -135,14 +135,14 @@
 			);
 			dependencies = (
 			);
-			name = "DynamicViewModal-Demo";
-			productName = "DynamicViewModal-Demo";
-			productReference = 2A2405E81A87ED4A00371941 /* DynamicViewModal-Demo.app */;
+			name = "PathDynamicModal-Demo";
+			productName = "PathDynamicModal-Demo";
+			productReference = 2A2405E81A87ED4A00371941 /* PathDynamicModal-Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2A2405FC1A87ED4A00371941 /* DynamicViewModal-DemoTests */ = {
+		2A2405FC1A87ED4A00371941 /* PathDynamicModal-DemoTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2A24060A1A87ED4A00371941 /* Build configuration list for PBXNativeTarget "DynamicViewModal-DemoTests" */;
+			buildConfigurationList = 2A24060A1A87ED4A00371941 /* Build configuration list for PBXNativeTarget "PathDynamicModal-DemoTests" */;
 			buildPhases = (
 				2A2405F91A87ED4A00371941 /* Sources */,
 				2A2405FA1A87ED4A00371941 /* Frameworks */,
@@ -153,9 +153,9 @@
 			dependencies = (
 				2A2405FF1A87ED4A00371941 /* PBXTargetDependency */,
 			);
-			name = "DynamicViewModal-DemoTests";
-			productName = "DynamicViewModal-DemoTests";
-			productReference = 2A2405FD1A87ED4A00371941 /* DynamicViewModal-DemoTests.xctest */;
+			name = "PathDynamicModal-DemoTests";
+			productName = "PathDynamicModal-DemoTests";
+			productReference = 2A2405FD1A87ED4A00371941 /* PathDynamicModal-DemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +176,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 2A2405E31A87ED4A00371941 /* Build configuration list for PBXProject "DynamicViewModal-Demo" */;
+			buildConfigurationList = 2A2405E31A87ED4A00371941 /* Build configuration list for PBXProject "PathDynamicModal-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,8 +189,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A2405E71A87ED4A00371941 /* DynamicViewModal-Demo */,
-				2A2405FC1A87ED4A00371941 /* DynamicViewModal-DemoTests */,
+				2A2405E71A87ED4A00371941 /* PathDynamicModal-Demo */,
+				2A2405FC1A87ED4A00371941 /* PathDynamicModal-DemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A24060F1A87EDDA00371941 /* DynamicViewModal.swift in Sources */,
+				2A24060F1A87EDDA00371941 /* PathDynamicModal.swift in Sources */,
 				2A2405F01A87ED4A00371941 /* ViewController.swift in Sources */,
 				2A2405EE1A87ED4A00371941 /* AppDelegate.swift in Sources */,
 			);
@@ -229,7 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A2406041A87ED4A00371941 /* DynamicViewModal_DemoTests.swift in Sources */,
+				2A2406041A87ED4A00371941 /* PathDynamicModal_DemoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +238,7 @@
 /* Begin PBXTargetDependency section */
 		2A2405FF1A87ED4A00371941 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2A2405E71A87ED4A00371941 /* DynamicViewModal-Demo */;
+			target = 2A2405E71A87ED4A00371941 /* PathDynamicModal-Demo */;
 			targetProxy = 2A2405FE1A87ED4A00371941 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -337,10 +337,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "DynamicViewModal-Demo/Info.plist";
+				INFOPLIST_FILE = "PathDynamicModal-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PathDynamicModal-Demo";
 			};
 			name = Debug;
 		};
@@ -349,10 +349,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				INFOPLIST_FILE = "DynamicViewModal-Demo/Info.plist";
+				INFOPLIST_FILE = "PathDynamicModal-Demo/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PathDynamicModal-Demo";
 			};
 			name = Release;
 		};
@@ -368,10 +368,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DynamicViewModal-DemoTests/Info.plist";
+				INFOPLIST_FILE = "PathDynamicModal-DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicViewModal-Demo.app/DynamicViewModal-Demo";
+				PRODUCT_NAME = "PathDynamicModal-DemoTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PathDynamicModal-Demo.app/PathDynamicModal-Demo";
 			};
 			name = Debug;
 		};
@@ -383,17 +383,17 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "DynamicViewModal-DemoTests/Info.plist";
+				INFOPLIST_FILE = "PathDynamicModal-DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DynamicViewModal-Demo.app/DynamicViewModal-Demo";
+				PRODUCT_NAME = "PathDynamicModal-DemoTests";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PathDynamicModal-Demo.app/PathDynamicModal-Demo";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2A2405E31A87ED4A00371941 /* Build configuration list for PBXProject "DynamicViewModal-Demo" */ = {
+		2A2405E31A87ED4A00371941 /* Build configuration list for PBXProject "PathDynamicModal-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A2406051A87ED4A00371941 /* Debug */,
@@ -402,21 +402,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2A2406071A87ED4A00371941 /* Build configuration list for PBXNativeTarget "DynamicViewModal-Demo" */ = {
+		2A2406071A87ED4A00371941 /* Build configuration list for PBXNativeTarget "PathDynamicModal-Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A2406081A87ED4A00371941 /* Debug */,
 				2A2406091A87ED4A00371941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		2A24060A1A87ED4A00371941 /* Build configuration list for PBXNativeTarget "DynamicViewModal-DemoTests" */ = {
+		2A24060A1A87ED4A00371941 /* Build configuration list for PBXNativeTarget "PathDynamicModal-DemoTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A24060B1A87ED4A00371941 /* Debug */,
 				2A24060C1A87ED4A00371941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

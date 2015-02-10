@@ -1,6 +1,6 @@
 //
-//  DynamicViewModal_DemoTests.swift
-//  DynamicViewModal-DemoTests
+//  PathDynamicModal_DemoTests.swift
+//  PathDynamicModal-DemoTests
 //
 //  Created by Ryo Aoyama on 2/9/15.
 //  Copyright (c) 2015 Ryo Aoyama. All rights reserved.
@@ -9,7 +9,7 @@
 import UIKit
 import XCTest
 
-class DynamicViewModal_DemoTests: XCTestCase {
+class PathDynamicModal_DemoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DynamicViewModal-Demo
+//  PathDynamicModal-Demo
 //
 //  Created by Ryo Aoyama on 2/9/15.
 //  Copyright (c) 2015 Ryo Aoyama. All rights reserved.

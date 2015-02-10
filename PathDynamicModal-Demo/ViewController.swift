@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  DynamicViewModal-Demo
+//  PathDynamicModal-Demo
 //
 //  Created by Ryo Aoyama on 2/9/15.
 //  Copyright (c) 2015 Ryo Aoyama. All rights reserved.
@@ -19,7 +19,7 @@ class ViewController: UIViewController {
         view.backgroundColor = UIColor.redColor()
         view.layer.cornerRadius = 5.0
         let window = UIApplication.sharedApplication().delegate?.window??
-        DynamicViewModal.show(contentView: view, inView: window!)
+        PathDynamicModal.show(contentView: view, inView: window!)
     }
 }
 
