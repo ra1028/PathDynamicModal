@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="co3-m6-vqA" customClass="ImageCell" customModule="PathDynamicModal_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="co3-m6-vqA" id="obS-QM-2uL">
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfA-p5-fKS">
+                        <rect key="frame" x="5" y="5" width="69" height="69"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="sfA-p5-fKS" secondAttribute="height" multiplier="1:1" id="Yo3-9N-WLh"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQs-AV-ky7">
+                        <rect key="frame" x="84" y="5" width="226" height="69"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="sfA-p5-fKS" firstAttribute="top" secondItem="obS-QM-2uL" secondAttribute="top" constant="5" id="KtP-Tf-Qa0"/>
+                    <constraint firstItem="KQs-AV-ky7" firstAttribute="leading" secondItem="sfA-p5-fKS" secondAttribute="trailing" constant="10" id="OEx-9Q-fpd"/>
+                    <constraint firstAttribute="trailing" secondItem="KQs-AV-ky7" secondAttribute="trailing" constant="10" id="XuB-pV-8Te"/>
+                    <constraint firstAttribute="bottom" secondItem="sfA-p5-fKS" secondAttribute="bottom" constant="5" id="dU7-Ix-3Uw"/>
+                    <constraint firstAttribute="bottom" secondItem="KQs-AV-ky7" secondAttribute="bottom" constant="5" id="pAz-h7-FTd"/>
+                    <constraint firstItem="KQs-AV-ky7" firstAttribute="top" secondItem="obS-QM-2uL" secondAttribute="top" constant="5" id="uYR-K5-3im"/>
+                    <constraint firstItem="sfA-p5-fKS" firstAttribute="leading" secondItem="obS-QM-2uL" secondAttribute="leading" constant="5" id="wGu-5a-BZM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="sideImageView" destination="sfA-p5-fKS" id="hp9-v6-tsC"/>
+                <outlet property="titleLabel" destination="KQs-AV-ky7" id="4He-cZ-P4H"/>
+            </connections>
+            <point key="canvasLocation" x="144" y="357"/>
+        </tableViewCell>
+    </objects>
+</document>

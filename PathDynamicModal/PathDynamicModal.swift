@@ -22,15 +22,12 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
             self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(backgroundAlpha)
         }
     }
+    var showMagnitude: CGFloat = 250.0
+    var closeMagnitude: CGFloat = 170.0
     var closeByTapBackground: Bool = true
     var closeBySwipeBackground: Bool = true
     var showedHandler: (() -> Void)?
     var closedHandler: (() -> Void)?
-    var closeButton: UIButton? {
-        didSet {
-            
-        }
-    }
     
     /* private properties */
     
@@ -38,9 +35,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
     private var contentView: UIView! = UIView()
     private var backgroundView: ModalRetainView! = ModalRetainView()
     private var animator: UIDynamicAnimator!
-    private var attachment: UIAttachmentBehavior?
     private var push: UIPushBehavior?
-    private var dynamicItem: UIDynamicItemBehavior?
     private var tap: UITapGestureRecognizer!
     private var pan: UIPanGestureRecognizer!
     private var originalTranslatesAutoresizingMaskIntoConstraints: Bool! = true
@@ -98,7 +93,6 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         self.tap.delegate = self
         
         self.pan = UIPanGestureRecognizer(target: self, action: "panBackgroundView:")
-        self.pan.delegate = self
         
         self.backgroundView.frame = UIScreen.mainScreen().bounds
         self.backgroundView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
@@ -125,23 +119,18 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
     private func applyShowBehaviors() {
         self.animator.removeAllBehaviors()
         
-        self.attachment = UIAttachmentBehavior(item: self.contentView, offsetFromCenter: UIOffsetMake(0, 0.0), attachedToAnchor: self.backgroundView.center)
-        self.attachment!.length = 0
-        self.attachment!.damping = 1.0
-        self.attachment!.frequency = 5.0
-        
         self.push = UIPushBehavior(items: [self.contentView], mode: .Instantaneous)
-        self.push!.setTargetOffsetFromCenter(UIOffset(horizontal: -2.0, vertical: 0), forItem: self.contentView)
-        self.push!.pushDirection = CGVectorMake(0, 100.0)
+        self.push!.setTargetOffsetFromCenter(UIOffset(horizontal: -1.0, vertical: 0), forItem: self.contentView)
+        self.push!.pushDirection = CGVectorMake(0, 1.0)
+        self.push!.magnitude = self.showMagnitude
         self.push!.action = {[weak self] in
             if let sSelf = self {
-                if sSelf.contentView.center.y >= sSelf.backgroundView.center.y - 20.0 {
+                if sSelf.contentView.center.y >= sSelf.backgroundView.center.y - 30.0 {
                     sSelf.fixOnCenter()
                 }
             }
         }
         
-        self.animator.addBehavior(self.attachment)
         self.animator.addBehavior(self.push)
     }
     
@@ -150,23 +139,20 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         
         self.push = UIPushBehavior(items: [self.contentView], mode: .Instantaneous)
         self.push!.setTargetOffsetFromCenter(UIOffset(horizontal: h, vertical: 0), forItem: self.contentView)
-        self.push!.pushDirection = CGVectorMake(0, 100.0)
-        
-        self.dynamicItem = UIDynamicItemBehavior(items: [self.contentView])
-        self.dynamicItem!.density = 1.2
+        self.push!.pushDirection = CGVectorMake(0, 1.0)
+        self.push!.magnitude = self.closeMagnitude
         
         self.animator.addBehavior(self.push)
-        self.animator.addBehavior(self.dynamicItem)
     }
     
     private func fixOnCenter() {
         self.animator.removeAllBehaviors()
         
-        UIView.animateWithDuration(0.12, delay: 0, options: .BeginFromCurrentState | .CurveEaseOut, animations: { () -> Void in
-            self.contentView.center.y = self.backgroundView.center.y + 10.0
+        UIView.animateWithDuration(0.08, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
+            self.contentView.center.y = self.backgroundView.center.y + 15.0
             self.contentView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI / 90.0))
             }, completion: { (flag) -> Void in
-                UIView.animateWithDuration(0.14, delay: 0, options: .BeginFromCurrentState | .CurveEaseOut, animations: { () -> Void in
+                UIView.animateWithDuration(0.12, delay: 0, options: .BeginFromCurrentState | .CurveEaseInOut, animations: { () -> Void in
                     self.contentView.center = self.backgroundView.center
                     self.contentView.transform = CGAffineTransformIdentity
                     }, completion:  { (flag) -> Void in
@@ -223,11 +209,13 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
             let location = sender.locationInView(self.backgroundView)
             let pan = sender.translationInView(self.backgroundView)
             let velocityY = sender.velocityInView(self.backgroundView).y
+            
+            let isDownGesuture = self.contentView.center.y >= self.backgroundView.center.y
+            let panYAmountOnBackground = pan.y / CGRectGetHeight(self.backgroundView.bounds)
+            let angle = (CGFloat(M_PI) / 180.0) * self.tapPointXPercentage(pointX: location.x) * (8.0 * panYAmountOnBackground)
+            
             switch sender.state {
             case .Changed:
-                let isDownGesuture = self.contentView.center.y >= self.backgroundView.center.y
-                let panYAmountOnBackground = pan.y / CGRectGetHeight(self.backgroundView.bounds)
-                let angle = (CGFloat(M_PI) / 180.0) * self.tapPointXPercentage(pointX: location.x) * (8.0 * panYAmountOnBackground)
                 self.contentView.transform = CGAffineTransformMakeRotation(isDownGesuture ? angle : 0)
                 self.contentView.center.y = self.backgroundView.center.y + (isDownGesuture ? pan.y : pan.y / 10.0)
                 self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(self.backgroundAlpha * (isDownGesuture ? 1.0 - panYAmountOnBackground : 1.0))
@@ -251,7 +239,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
     /* delegate functions */
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldReceiveTouch touch: UITouch) -> Bool {
-        return (gestureRecognizer.view == touch.view || gestureRecognizer == self.pan) ? true : false
+        return gestureRecognizer.view == touch.view ? true : false
     }
 }
 

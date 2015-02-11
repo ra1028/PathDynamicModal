@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="ImageModalView" id="XN5-j7-pBD" customClass="ImageModalView" customModule="PathDynamicModal_Demo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="370"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcQ-sj-bsa">
+                    <rect key="frame" x="0.0" y="0.0" width="280" height="370"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x3l-fn-fq6">
+                            <rect key="frame" x="0.0" y="0.0" width="280" height="310"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pld-DB-PJ8">
+                            <rect key="frame" x="0.0" y="310" width="280" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="handleBottomButton:" destination="XN5-j7-pBD" eventType="touchUpInside" id="HiT-Rm-rTj"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Pld-DB-PJ8" firstAttribute="top" secondItem="x3l-fn-fq6" secondAttribute="bottom" id="8sq-45-ofc"/>
+                        <constraint firstAttribute="bottom" secondItem="x3l-fn-fq6" secondAttribute="bottom" constant="60" id="90X-3P-ZgR"/>
+                        <constraint firstAttribute="trailing" secondItem="x3l-fn-fq6" secondAttribute="trailing" id="9dc-w1-Y90"/>
+                        <constraint firstAttribute="bottom" secondItem="Pld-DB-PJ8" secondAttribute="bottom" id="AFL-xz-xPD"/>
+                        <constraint firstItem="Pld-DB-PJ8" firstAttribute="leading" secondItem="wcQ-sj-bsa" secondAttribute="leading" id="OFO-oc-Mjv"/>
+                        <constraint firstItem="x3l-fn-fq6" firstAttribute="top" secondItem="wcQ-sj-bsa" secondAttribute="top" id="mGq-JE-VlX"/>
+                        <constraint firstAttribute="trailing" secondItem="Pld-DB-PJ8" secondAttribute="trailing" id="rA8-0c-PAq"/>
+                        <constraint firstItem="x3l-fn-fq6" firstAttribute="leading" secondItem="wcQ-sj-bsa" secondAttribute="leading" id="xLp-I0-qfi"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pW5-1n-j47">
+                    <rect key="frame" x="-10" y="-10" width="25" height="25"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="AyL-xT-dt6"/>
+                        <constraint firstAttribute="height" constant="25" id="OHF-sN-R46"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="icon_close">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="handleCloseButton:" destination="XN5-j7-pBD" eventType="touchUpInside" id="AV3-b8-cRI"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="pW5-1n-j47" firstAttribute="top" secondItem="XN5-j7-pBD" secondAttribute="top" constant="-10" id="F41-EX-Kcb"/>
+                <constraint firstItem="wcQ-sj-bsa" firstAttribute="top" secondItem="XN5-j7-pBD" secondAttribute="top" id="F7J-63-eZB"/>
+                <constraint firstAttribute="bottom" secondItem="wcQ-sj-bsa" secondAttribute="bottom" id="KP9-qb-WMJ"/>
+                <constraint firstItem="pW5-1n-j47" firstAttribute="leading" secondItem="XN5-j7-pBD" secondAttribute="leading" constant="-10" id="WRI-h4-38y"/>
+                <constraint firstAttribute="trailing" secondItem="wcQ-sj-bsa" secondAttribute="trailing" id="dmn-P3-0Zb"/>
+                <constraint firstItem="wcQ-sj-bsa" firstAttribute="leading" secondItem="XN5-j7-pBD" secondAttribute="leading" id="r1M-Ba-6D3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="closeButton" destination="pW5-1n-j47" id="IUZ-jt-CdJ"/>
+                <outlet property="contentView" destination="wcQ-sj-bsa" id="rMs-cc-2kH"/>
+                <outlet property="imageView" destination="x3l-fn-fq6" id="oJd-1Z-Zfj"/>
+            </connections>
+            <point key="canvasLocation" x="415" y="366"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_close" width="64" height="64"/>
+    </resources>
+</document>

@@ -13,8 +13,13 @@
 		2A2405F51A87ED4A00371941 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2405F41A87ED4A00371941 /* Images.xcassets */; };
 		2A2406041A87ED4A00371941 /* PathDynamicModal_DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2406031A87ED4A00371941 /* PathDynamicModal_DemoTests.swift */; };
 		2A24060F1A87EDDA00371941 /* PathDynamicModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A24060E1A87EDDA00371941 /* PathDynamicModal.swift */; };
+		2A7F093A1A8BEDB700209AFB /* ImageModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A7F09391A8BEDB700209AFB /* ImageModalView.xib */; };
+		2A7F093C1A8BEFAB00209AFB /* ImageModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7F093B1A8BEFAB00209AFB /* ImageModalView.swift */; };
+		2ABA494D1A8BD97300646411 /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2ABA494C1A8BD97300646411 /* ImageCell.xib */; };
+		2ABA494F1A8BDAE400646411 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABA494E1A8BDAE400646411 /* ImageCell.swift */; };
 		2AE6653F1A8A9CB20048AFF2 /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE6653E1A8A9CB20048AFF2 /* ModalView.xib */; };
 		2AE665411A8AA64F0048AFF2 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AE665401A8AA64F0048AFF2 /* ModalView.swift */; };
+		2AE665461A8BCC6A0048AFF2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AE665451A8BCC6A0048AFF2 /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +43,13 @@
 		2A2406021A87ED4A00371941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2406031A87ED4A00371941 /* PathDynamicModal_DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathDynamicModal_DemoTests.swift; sourceTree = "<group>"; };
 		2A24060E1A87EDDA00371941 /* PathDynamicModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathDynamicModal.swift; sourceTree = "<group>"; };
+		2A7F09391A8BEDB700209AFB /* ImageModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageModalView.xib; sourceTree = "<group>"; };
+		2A7F093B1A8BEFAB00209AFB /* ImageModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageModalView.swift; sourceTree = "<group>"; };
+		2ABA494C1A8BD97300646411 /* ImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		2ABA494E1A8BDAE400646411 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		2AE6653E1A8A9CB20048AFF2 /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		2AE665401A8AA64F0048AFF2 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		2AE665451A8BCC6A0048AFF2 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,9 +94,14 @@
 			children = (
 				2A2405ED1A87ED4A00371941 /* AppDelegate.swift */,
 				2A2405EF1A87ED4A00371941 /* ViewController.swift */,
+				2ABA494E1A8BDAE400646411 /* ImageCell.swift */,
 				2AE665401A8AA64F0048AFF2 /* ModalView.swift */,
+				2A7F093B1A8BEFAB00209AFB /* ImageModalView.swift */,
+				2ABA494C1A8BD97300646411 /* ImageCell.xib */,
+				2A7F09391A8BEDB700209AFB /* ImageModalView.xib */,
 				2AE6653E1A8A9CB20048AFF2 /* ModalView.xib */,
 				2A2405F11A87ED4A00371941 /* Main.storyboard */,
+				2AE665451A8BCC6A0048AFF2 /* LaunchScreen.xib */,
 				2A2405F41A87ED4A00371941 /* Images.xcassets */,
 				2A2405EB1A87ED4A00371941 /* Supporting Files */,
 			);
@@ -206,8 +221,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7F093A1A8BEDB700209AFB /* ImageModalView.xib in Resources */,
+				2AE665461A8BCC6A0048AFF2 /* LaunchScreen.xib in Resources */,
 				2A2405F31A87ED4A00371941 /* Main.storyboard in Resources */,
 				2AE6653F1A8A9CB20048AFF2 /* ModalView.xib in Resources */,
+				2ABA494D1A8BD97300646411 /* ImageCell.xib in Resources */,
 				2A2405F51A87ED4A00371941 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,8 +246,10 @@
 			files = (
 				2A24060F1A87EDDA00371941 /* PathDynamicModal.swift in Sources */,
 				2A2405F01A87ED4A00371941 /* ViewController.swift in Sources */,
+				2A7F093C1A8BEFAB00209AFB /* ImageModalView.swift in Sources */,
 				2AE665411A8AA64F0048AFF2 /* ModalView.swift in Sources */,
 				2A2405EE1A87ED4A00371941 /* AppDelegate.swift in Sources */,
+				2ABA494F1A8BDAE400646411 /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
