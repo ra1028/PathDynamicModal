@@ -30,8 +30,8 @@ Cocoapods has not yet supported.
 ```
 var backgroundColor: UIColor // Default is UIColor.blackColor()
 var backgroundAlpha: CGFloat // Default is 0.7 
-var showMagnitude: CGFloat // Default is 250.0. This affects the speed modal dropping to show.
-var closeMagnitude: CGFloat // Default is 170.0. This affects the speed modal dropping to close.
+var showMagnitude: CGFloat // Default is 250.0. This affects the speed modal of dropping to show.
+var closeMagnitude: CGFloat // Default is 170.0. This affects the speed of modal dropping to close.
 var closeByTapBackground: Bool // Default is true
 var closeBySwipeBackground: Bool // Default is true
 var showedHandler: (() -> Void)?
