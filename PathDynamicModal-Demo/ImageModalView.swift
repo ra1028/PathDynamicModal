@@ -39,7 +39,7 @@ class ImageModalView: UIView {
     }
     
     class func instantiateFromNib() -> ImageModalView {
-        let view = UINib(nibName: "ImageModalView", bundle: nil).instantiateWithOwner(nil, options: nil).first as ImageModalView
+        let view = UINib(nibName: "ImageModalView", bundle: nil).instantiateWithOwner(nil, options: nil).first as! ImageModalView
         
         return view
     }
