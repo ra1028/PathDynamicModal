@@ -33,12 +33,12 @@ class ViewController: UIViewController {
         }
     }
     
-    private func fillNavigationBar(#color: UIColor) {
+    private func fillNavigationBar(color color: UIColor) {
         if let nav = self.navigationController {
             nav.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
             nav.navigationBar.shadowImage = UIImage()
             for view in nav.navigationBar.subviews {
-                if view.isKindOfClass(NSClassFromString("_UINavigationBarBackground")) {
+                if view.isKindOfClass(NSClassFromString("_UINavigationBarBackground")!) {
                     if view.isKindOfClass(UIView) {
                         (view as UIView).backgroundColor = color
                     }
@@ -49,7 +49,7 @@ class ViewController: UIViewController {
     
     @IBAction func helloButton(sender: UIButton) {
         let view = ModalView.instantiateFromNib()
-        let window = UIApplication.sharedApplication().delegate?.window??
+        let window = UIApplication.sharedApplication().delegate?.window!
         let modal = PathDynamicModal()
         modal.showMagnitude = 200.0
         modal.closeMagnitude = 130.0
@@ -71,7 +71,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         
         let view = ImageModalView.instantiateFromNib()
         view.image = self.titleAndImages[indexPath.item].1
-        let window = UIApplication.sharedApplication().delegate?.window??
+        let window = UIApplication.sharedApplication().delegate?.window!
         let modal = PathDynamicModal.show(modalView: view, inView: window!)
         view.closeButtonHandler = {[weak modal] in
             modal?.closeWithLeansRandom()
@@ -96,7 +96,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("imageCell", forIndexPath: indexPath) as ImageCell
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("imageCell", forIndexPath: indexPath) as! ImageCell
         let titleAndImage = self.titleAndImages[indexPath.item]
         cell.title = titleAndImage.0
         cell.sideImage = titleAndImage.1

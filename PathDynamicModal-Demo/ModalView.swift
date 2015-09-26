@@ -17,7 +17,7 @@ class ModalView: UIView {
     @IBOutlet weak var closeButton: UIButton!
     
     class func instantiateFromNib() -> ModalView {
-        let view = UINib(nibName: "ModalView", bundle: nil).instantiateWithOwner(nil, options: nil).first as ModalView
+        let view = UINib(nibName: "ModalView", bundle: nil).instantiateWithOwner(nil, options: nil).first as! ModalView
         
         return view
     }

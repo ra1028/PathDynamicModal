@@ -75,7 +75,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
     }
     
     func closeWithLeansRandom() {
-        var rand = (30.0 - CGFloat(arc4random_uniform(60))) / 10.0
+        let rand = (30.0 - CGFloat(arc4random_uniform(60))) / 10.0
         self.close(horizontalOffset: rand)
     }
     
@@ -109,7 +109,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
             self.backgroundView.modal = nil
             
             self.view.center = self.originalCenter
-            self.view.setTranslatesAutoresizingMaskIntoConstraints(self.originalTranslatesAutoresizingMaskIntoConstraints)
+            self.view.translatesAutoresizingMaskIntoConstraints = self.originalTranslatesAutoresizingMaskIntoConstraints
             
             self.closedHandler?()
             }
@@ -131,7 +131,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
             }
         }
         
-        self.animator.addBehavior(self.push)
+        self.animator.addBehavior(self.push!)
     }
     
     private func applyCloseBehaviors(horizontalOffset h: CGFloat) {
@@ -142,7 +142,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         self.push!.pushDirection = CGVectorMake(0, 1.0)
         self.push!.magnitude = self.closeMagnitude
         
-        self.animator.addBehavior(self.push)
+        self.animator.addBehavior(self.push!)
     }
     
     private func fixOnCenter() {
@@ -152,7 +152,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
             self.contentView.center.y = self.backgroundView.center.y + 15.0
             self.contentView.transform = CGAffineTransformMakeRotation(CGFloat(M_PI / 90.0))
             }, completion: { (flag) -> Void in
-                UIView.animateWithDuration(0.12, delay: 0, options: .BeginFromCurrentState | .CurveEaseInOut, animations: { () -> Void in
+                UIView.animateWithDuration(0.12, delay: 0, options: [.BeginFromCurrentState, .CurveEaseInOut], animations: { () -> Void in
                     self.contentView.center = self.backgroundView.center
                     self.contentView.transform = CGAffineTransformIdentity
                     }, completion:  { (flag) -> Void in
@@ -162,10 +162,10 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         })
     }
     
-    private func configureContentView(#view: UIView) {
+    private func configureContentView(view view: UIView) {
         self.originalCenter = view.center
-        self.originalTranslatesAutoresizingMaskIntoConstraints = view.translatesAutoresizingMaskIntoConstraints()
-        view.setTranslatesAutoresizingMaskIntoConstraints(true)
+        self.originalTranslatesAutoresizingMaskIntoConstraints = view.translatesAutoresizingMaskIntoConstraints
+        view.translatesAutoresizingMaskIntoConstraints = true
         
         self.contentView.frame = view.bounds
         self.contentView.center = self.backgroundView.center
@@ -176,7 +176,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         self.backgroundView.addSubview(self.contentView)
     }
     
-    private func fadeBackgroundView(#fromAlpha: CGFloat, toAlpha: CGFloat, completion: (Bool -> ())?) {
+    private func fadeBackgroundView(fromAlpha fromAlpha: CGFloat, toAlpha: CGFloat, completion: (Bool -> ())?) {
         UIView.animateWithDuration(0.4, delay: 0, options: .BeginFromCurrentState, animations: { () -> Void in
             self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(self.backgroundAlpha * fromAlpha)
             self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(self.backgroundAlpha * toAlpha)
@@ -186,7 +186,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
         }
     }
     
-    private func tapPointXPercentage(#pointX: CGFloat) -> CGFloat {
+    private func tapPointXPercentage(pointX pointX: CGFloat) -> CGFloat {
         /* return |-1 0 1| */
         let width = CGRectGetWidth(self.backgroundView.bounds)
         if pointX >= width / 2.0 {
@@ -224,7 +224,7 @@ class PathDynamicModal: NSObject, UIGestureRecognizerDelegate {
                     || velocityY >= 200.0 {
                     self.close(horizontalOffset: 0)
                 }else {
-                    UIView.animateWithDuration(0.3, delay: 0, options: .BeginFromCurrentState | .CurveEaseOut, animations: { () -> Void in
+                    UIView.animateWithDuration(0.3, delay: 0, options: [.BeginFromCurrentState, .CurveEaseOut], animations: { () -> Void in
                         self.contentView.transform = CGAffineTransformIdentity
                         self.contentView.center = self.backgroundView.center
                         self.backgroundView.backgroundColor = self.backgroundColor.colorWithAlphaComponent(self.backgroundAlpha)
